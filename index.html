@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Componentes UI - Luis Zambrano</title>
+  <link rel="stylesheet" href="./styles/variables.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./componentes/buttons.css">
+  <link rel="stylesheet" href="./componentes/cards.css">
+  <link rel="stylesheet" href="./componentes/forms.css">
+  <link rel="stylesheet" href="./componentes/navbar.css">
+  <link rel="stylesheet" href="./componentes/modal.css">
+  <link rel="stylesheet" href="./componentes/tooltips.css">
+  <link rel="stylesheet" href="./componentes/tabs.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar__logo">Luis Zambrano</div>
+    <nav class="navbar__menu">
+      <a href="index.html" class="navbar__link">Inicio</a>
+      <a href="https://elbachillerweb.com/" class="navbar__link" target="_blank">Servicios</a>
+      <a href="https://www.instagram.com/elbachillerweb_oficial/" class="navbar__link" target="_blank">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="demo">
+    <section>
+      <h2 class="section-title">Botones</h2>
+      <button class="btn btn--primary">Primario</button>
+      <button class="btn btn--secondary">Secundario</button>
+      <button class="btn" disabled>Deshabilitado</button>
+    </section>
+
+    <section>
+      <h2 class="section-title">Tarjeta</h2>
+      <div class="card">
+        <h3 class="card__title">Introducción al Diseño Web</h3>
+        <p class="card__content">El diseño web es la creación visual y funcional de sitios para Internet, combinando estética, usabilidad y tecnología.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Formulario</h2>
+      <form class="form">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" placeholder="Tu nombre" />
+
+        <label for="opciones">Género</label>
+        <select id="opciones">
+          <option>Seleccione</option>
+          <option>Masculino</option>
+          <option>Femenino</option>
+        </select>
+
+        <label>
+          <input type="checkbox" /> Acepto términos
+        </label>
+
+        <button class="btn btn--primary">Enviar</button>
+      </form>
+    </section>
+
+    <section>
+      <h2 class="section-title">Modal</h2>
+      <button class="btn btn--secondary" onclick="document.getElementById('modal').classList.add('modal--visible')">Abrir Modal</button>
+      <div id="modal" class="modal">
+        <div class="modal__content">
+          <span class="modal__close" onclick="document.getElementById('modal').classList.remove('modal--visible')">&times;</span>
+          <h3>Bienvenido a mi Sitio web</h3>
+          <p>¡Gracias por unirte! Estamos encantados de tenerte aquí. Explora las funciones y no dudes en contactarnos si necesitas ayuda.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Tooltip</h2>
+      <button class="tooltip" data-tooltip="Actividad 5 - Luis Zambrano">Pasa el mouse</button>
+    </section>
+
+    <section>
+      <h2 class="section-title">Tabs</h2>
+      <div class="tabs">
+        <input type="radio" id="tab1" name="tabs" checked>
+        <label for="tab1">Información General</label>
+        <input type="radio" id="tab2" name="tabs">
+        <label for="tab2">Detalles Técnicos</label>
+        <input type="radio" id="tab3" name="tabs">
+        <label for="tab3">Contacto</label>
+
+        <div class="tabs__content tabs__content--1">
+          <p>Bienvenido a la sección de información general.</p>
+        </div>
+        <div class="tabs__content tabs__content--2">
+          <p>En esta pestaña se explica la parte técnica o los datos específicos.</p>
+        </div>
+        <div class="tabs__content tabs__content--3">
+          <p>Email: lzambrano5611@utm.edu.ec</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Componentes UI &copy; Luis Zambrano 2025</p>
+  </footer>
+</body>
+</html>
