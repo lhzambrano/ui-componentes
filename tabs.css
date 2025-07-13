@@ -1,0 +1,45 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs input {
+  display: none;
+}
+
+.tabs label {
+  padding: 0.5rem;
+  background: var(--color-border);
+  margin-right: 0.3rem;
+  cursor: pointer;
+  border-radius: var(--radius) var(--radius) 0 0;
+  display: inline-block;
+}
+
+.tabs__content {
+  display: none;
+  padding: var(--spacing);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-top: none;
+}
+
+#tab1:checked ~ label[for="tab1"] {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+#tab2:checked ~ label[for="tab2"] {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+#tab3:checked ~ label[for="tab3"] {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+#tab1:checked ~ .tabs__content--1,
+#tab2:checked ~ .tabs__content--2,
+#tab3:checked ~ .tabs__content--3 {
+  display: block;
+}

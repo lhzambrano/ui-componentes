@@ -1,0 +1,15 @@
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--spacing);
+  max-width: 500px;
+}
+
+.card__title {
+  margin-bottom: 0.5rem;
+}
+
+.card__content {
+  color: #555;
+}
